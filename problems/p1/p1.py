@@ -1,0 +1,10 @@
+"""
+project euler problem 1
+"""
+
+total = 0
+for i in range(1000):
+    if i%3 == 0 or i%5 == 0:
+        total += i
+
+print("sum of all natural numbers less than 1000:", total)

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+g++ problems/p$1/p$1.cpp
+printf "C++\n-----------\n"
+time ./a.out
+printf "\npython\n-----------\n"
+time python problems/p$1/p$1.py
+rm a.out
