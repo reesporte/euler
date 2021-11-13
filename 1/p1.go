@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	total := 0
-	for i := 0; i < 1000; i++ {
-		if i%3 == 0 || i%5 == 0 {
-			total += i
-		}
-	}
-	fmt.Println(total)
+	fmt.Println(sumkn(3, 1000) + sumkn(5, 1000) - sumkn(15, 1000))
+}
+
+func sumkn(k, n int) int {
+	// closed form summation formula
+	p := (n - 1) / k
+	return (k * p * (p + 1)) / 2
 }
